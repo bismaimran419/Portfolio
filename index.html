@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bisma | CS Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Inter for body, Sora for display -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.0.3/src/index.js" defer></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       Sticky nav with logo, links, and responsive hamburger menu
+  ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <!-- Logo / Brand -->
+      <a href="#hero" class="nav-logo">Bisma<span class="accent">.</span></a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Hamburger Button (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO SECTION
+         Full-screen introduction with CTA buttons
+    ============================================================ -->
+    <section class="hero" id="hero">
+  <div class="container hero-inner">
+
+  <!-- Left: Text Content -->
+  <div class="hero-text">
+    <p class="hero-eyebrow">Hello, I'm</p>
+    <h1 class="hero-name">Bisma Imran</h1>
+    <h2 class="hero-role">BS Computer Science Student</h2>
+    <p class="hero-tagline">
+      Building thoughtful software solutions one line of C++ at a time.
+      Passionate about algorithms, clean code, and continuous learning.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    </div>
+  </div>
+
+  <!-- Right: Image Wrapper (Larger & Square) -->
+  <div class="hero-image-wrap">
+    <div class="hero-avatar" aria-label="Profile photo placeholder" style="width: 400px; height: 400px; overflow: hidden; border-radius: 0;">
+      <img src="assets/images/profile.png" 
+           alt="Profile of Bisma Imran" 
+           class="hero-image-actual" 
+           style="width: 100%; height: 100%; object-fit: cover; border-radius: 0;">
+    </div>
+  </div>
+</div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+        <i class="ph ph-arrow-down" aria-hidden="true"></i>
+      </a>
+    </section>
+
+
+    <!-- ============================================================
+         ABOUT SECTION
+         Professional summary, career goals, and education
+    ============================================================ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+
+          <!-- Summary & Goals -->
+          <div class="about-text">
+            <p class="about-summary">
+              I'm a motivated Computer Science undergraduate with a strong foundation in
+              object-oriented programming, data structures, and problem solving. I enjoy
+              turning complex problems into clean, efficient code and thrive in collaborative
+              environments where learning never stops.
+            </p>
+            <p class="about-goals">
+             My goal is to grow as a Data Scientist who uncovers meaningful insights and builds data-driven solutions that bridge technical excellence with real-world impact. I'm actively seeking data science internships and opportunities where I can leverage analytical thinking, contribute to predictive modeling, and learn alongside experienced teams in the industry.
+            </p>
+          </div>
+
+          <!-- Education Card -->
+          <div class="about-education">
+            <div class="edu-card">
+              <div class="edu-icon">
+                <i class="ph ph-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <div class="edu-details">
+                <p class="edu-label">Education</p>
+                <h3 class="edu-degree">BS Computer Science</h3>
+                <p class="edu-school">Muhammad Ali Jinnah University</p>
+                <p class="edu-year">Expected Graduation: 2028</p>
+              </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num">1+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">8+</span>
+                <span class="stat-label">Skills</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">∞</span>
+                <span class="stat-label">Curiosity</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SKILLS SECTION
+         Skill cards with icons for each technical competency
+    ============================================================ -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Technologies and concepts I work with</p>
+
+        <div class="skills-grid">
+
+          <!-- C++ -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-code" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">C++</h3>
+            <p class="skill-desc">Core language for systems programming, game development, and competitive coding.</p>
+          </div>
+
+          <!-- OOP -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-cube" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">Object-Oriented Programming</h3>
+            <p class="skill-desc">Design patterns, inheritance, encapsulation, polymorphism, and abstraction.</p>
+          </div>
+
+          <!-- DSA -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-tree-structure" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">Data Structures &amp; Algorithms</h3>
+            <p class="skill-desc">Arrays, linked lists, trees, graphs, sorting, searching, and complexity analysis.</p>
+          </div>
+
+          <!-- HTML -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-file-html" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">HTML</h3>
+            <p class="skill-desc">Semantic markup, accessibility best practices, and structured web content.</p>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-paint-bucket" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">CSS</h3>
+            <p class="skill-desc">Responsive layouts, Flexbox, Grid, and clean visual styling for web interfaces.</p>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-lightning" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+            <p class="skill-desc">DOM manipulation, event handling, and interactive front-end behavior.</p>
+          </div>
+
+
+          <!-- Problem Solving -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="ph ph-puzzle-piece" aria-hidden="true"></i>
+            </div>
+            <h3 class="skill-name">Problem Solving</h3>
+            <p class="skill-desc">Analytical thinking, algorithmic reasoning, and decomposing complex challenges.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         PROJECTS SECTION
+         Project cards with tech stack tags and links
+    ============================================================ -->
+ <section class="section" id="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Selected work showcasing my technical skills</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card terminal-card" style="grid-column: 1 / -1; max-width: 1200px; margin: 0 auto; width: 100%;">
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="ph ph-terminal-window" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title" style="margin-left: 10px; display: inline-block; vertical-align: middle;">Interactive Bus Management System (C++ Project)</h3>
+        </div>
+        
+        <p class="project-desc">
+          Mera real-world C++ OOP based project console par kaise run hota hai, uska aik live functional preview neechay screen par mulahiza karein.
+        </p>
+
+        <div class="terminal-container" style="background-color: #1c1c1c; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); overflow: hidden; margin-top: 15px; border: 1px solid #333;">
+          
+          <div class="terminal-window-header" style="background-color: #2d2d2d; padding: 8px 12px; display: flex; align-items: center; border-bottom: 1px solid #3c3c3c;">
+            <span style="height: 10px; width: 10px; background-color: #ff5f56; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+            <span style="height: 10px; width: 10px; background-color: #ffbd2e; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+            <span style="height: 10px; width: 10px; background-color: #27c93f; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+            <span style="color: #aaa; margin-left: 10px; font-size: 13px; font-weight: bold;">busproject.exe — Live Execution Screen</span>
+          </div>
+
+          <div class="terminal-window-body" style="padding: 0; height: 450px; background-color: #000; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+            
+         <video width="100%" height="100%" autoplay loop muted playsinline webkit-playsinline style="width: 100%; height: 100%; object-fit: contain; background-color: #000; display: block;">
+  <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+          </div>
+        </div>
+
+        <div class="project-tags" style="margin-top: 15px; display: inline-block; width: 100%;">
+          <div style="float: left;">
+            <span class="tag">C++ Core</span>
+            <span class="tag">Object-Oriented Programming</span>
+            <span class="tag">File Handling</span>
+          </div>
+          <div style="float: right;">
+            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" class="tag" style="background: none; border: 1px solid #00aaff; color: #00aaff; text-decoration: none; font-weight: bold; padding: 5px 12px; border-radius: 4px;">
+              <i class="ph ph-github-logo" aria-hidden="true" style="vertical-align: middle;"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ============================================================
+         CERTIFICATIONS SECTION
+         Placeholder cards — editable for future certificates
+    ============================================================ -->
+  <section class="section section-alt" id="certifications">
+  <div class="container">
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-sub">Professional development and completed courses</p>
+
+    <div class="certs-grid">
+
+      <!-- Certification 1 -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <i class="ph ph-certificate" aria-hidden="true"></i>
+        </div>
+        <div class="cert-body">
+          <p class="cert-issuer">Cisco Networking Academy</p>
+          <h3 class="cert-name">Industrial Networking Essentials</h3>
+          <p class="cert-date">Jun 2026</p>
+        </div>
+        <!-- href="#" ki jagah data-cert-img lagaya hai -->
+        <a href="javascript:void(0);" data-cert-img="assets/images/certificate-1.jpg" class="cert-link" aria-label="View certificate">
+          View <i class="ph ph-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Certification 2 -->
+      <div class="cert-card">
+        <div class="cert-icon">
+          <i class="ph ph-certificate" aria-hidden="true"></i>
+        </div>
+        <div class="cert-body">
+        <p class="cert-issuer">Cisco Networking Academy</p>
+          <h3 class="cert-name">C++ Essentials 2</h3>
+          <p class="cert-date">Jan 2026</p>
+        </div>
+        <!-- Apni real images ka path yahan dena hai -->
+        <a href="javascript:void(0);" data-cert-img="assets/images/certificate-2.jpg" class="cert-link" aria-label="View certificate">
+          View <i class="ph ph-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CERTIFICATE MODAL DIALOG
+     ========================================== -->
+<div id="cert-modal" class="cert-modal" aria-hidden="true">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Close dialog">&times;</button>
+    <div class="modal-body">
+      <img id="modal-img" src="" alt="Certificate Preview">
+    </div>
+  </div>
+</div>
+
+    <!-- ============================================================
+         RESUME SECTION
+         Download button for resume PDF
+    ============================================================ -->
+    <section class="section resume-section" id="resume">
+      <div class="container resume-inner">
+        <div class="resume-text">
+          <h2 class="section-title left-align">Resume</h2>
+          <p class="resume-desc">
+            Want a quick overview of my background, skills, and academic achievements?
+            Download my resume to learn more.
+          </p>
+          <!-- Replace href with actual PDF file path when ready -->
+          <a href="resume.pdf" download class="btn btn-primary resume-btn">
+            <i class="ph ph-download-simple" aria-hidden="true"></i>
+            Download Resume
+          </a>
+        </div>
+        <div class="resume-visual" aria-hidden="true">
+          <i class="ph ph-file-pdf"></i>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACT SECTION
+         Social links + contact form UI
+    ============================================================ -->
+    <section class="section section-alt" id="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">I'm open to internships, collaborations, and opportunities</p>
+
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="ph ph-envelope" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <a href="mailto:bismaimran419@gmail.com" class="contact-value">bismaimran419@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/bisma-imran-1671a3308/" target="_blank" rel="noopener noreferrer" class="contact-value">linkedin.com/in/bisma-imran-1671a3308/</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="ph ph-github-logo" aria-hidden="true"></i>
+          </div>
+          <div>
+            <p class="contact-label">GitHub</p>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/yourusername</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <!-- Action aur Method Formspree api handle karne k liye lagaya hai -->
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mnjyoewk" method="POST" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Internship Opportunity" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or just say hello..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-btn">
+            <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+            Send Message
+          </button>
+
+          <!-- Form status message (shown via JS) -->
+          <p class="form-status" id="form-status" role="alert" aria-live="polite"></p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Bisma<span class="accent">.</span></p>
+      <p class="footer-copy">
+        &copy; <span id="year"></span> Bisma. Designed &amp; built with care.
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="mailto:bisma@example.com" aria-label="Email">
+          <i class="ph ph-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
