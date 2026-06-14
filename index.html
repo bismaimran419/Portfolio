@@ -224,57 +224,95 @@
          PROJECTS SECTION
          Project cards with tech stack tags and links
     ============================================================ -->
- <section class="section" id="projects">
+<section class="section" id="projects">
   <div class="container">
     <h2 class="section-title">Projects</h2>
     <p class="section-sub">Selected work showcasing my technical skills</p>
 
-    <div class="projects-grid">
+    <div class="projects-grid" style="display: flex; gap: 24px; width: 100%; max-width: 1200px; margin: 0 auto; justify-content: space-between;">
 
-      <div class="project-card terminal-card" style="grid-column: 1 / -1; max-width: 1200px; margin: 0 auto; width: 100%;">
+      <div class="project-card terminal-card" style="flex: 1; min-width: 0;">
         <div class="project-header">
           <div class="project-icon">
             <i class="ph ph-terminal-window" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" style="margin-left: 10px; display: inline-block; vertical-align: middle;">Interactive Bus Management System (C++ Project)</h3>
+          <h3 class="project-title" style="margin-left: 10px; display: inline-block; vertical-align: middle;">Bus Management System</h3>
         </div>
         
         <p class="project-desc">
-          Mera real-world C++ OOP based project console par kaise run hota hai, uska aik live functional preview neechay screen par mulahiza karein.
+          A terminal-based system developed in C++ using Object-Oriented Programming (OOP) design patterns. It abstracts system components into real-world classes to handle bus registrations, seat maps, and passenger reservations seamlessly.
         </p>
 
         <div class="terminal-container" style="background-color: #1c1c1c; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); overflow: hidden; margin-top: 15px; border: 1px solid #333;">
-          
           <div class="terminal-window-header" style="background-color: #2d2d2d; padding: 8px 12px; display: flex; align-items: center; border-bottom: 1px solid #3c3c3c;">
             <span style="height: 10px; width: 10px; background-color: #ff5f56; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
             <span style="height: 10px; width: 10px; background-color: #ffbd2e; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
             <span style="height: 10px; width: 10px; background-color: #27c93f; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
-            <span style="color: #aaa; margin-left: 10px; font-size: 13px; font-weight: bold;">busproject.exe — Live Execution Screen</span>
+            <span style="color: #aaa; margin-left: 10px; font-size: 13px; font-weight: bold;">bus_management.exe — OOP Console</span>
           </div>
 
           <div class="terminal-window-body" style="padding: 0; height: 450px; background-color: #000; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-            
-         <video width="100%" height="100%" autoplay loop muted playsinline webkit-playsinline style="width: 100%; height: 100%; object-fit: contain; background-color: #000; display: block;">
-  <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
+            <video width="100%" height="100%" autoplay loop muted playsinline webkit-playsinline style="width: 100%; height: 100%; object-fit: contain; background-color: #000; display: block;">
+              <source src="assets/images/video-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
         <div class="project-tags" style="margin-top: 15px; display: inline-block; width: 100%;">
           <div style="float: left;">
-            <span class="tag">C++ Core</span>
-            <span class="tag">Object-Oriented Programming</span>
-            <span class="tag">File Handling</span>
+            <span class="tag">C++</span>
+            <span class="tag">OOP (Object-Oriented)</span>
+            <span class="tag">Console Application</span>
           </div>
           <div style="float: right;">
-            <a href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank" class="tag" style="background: none; border: 1px solid #00aaff; color: #00aaff; text-decoration: none; font-weight: bold; padding: 5px 12px; border-radius: 4px;">
+            <a href="https://github.com/bismaimran419/bus-management" target="_blank" class="tag" style="background: none; border: 1px solid #00aaff; color: #00aaff; text-decoration: none; font-weight: bold; padding: 5px 12px; border-radius: 4px;">
               <i class="ph ph-github-logo" aria-hidden="true" style="vertical-align: middle;"></i> Source Code
             </a>
           </div>
         </div>
+      </div>
 
+      <div class="project-card terminal-card" style="flex: 1; min-width: 0;">
+        <div class="project-header">
+          <div class="project-icon">
+            <i class="ph ph-terminal-window" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title" style="margin-left: 10px; display: inline-block; vertical-align: middle;">Bank Management System</h3>
+        </div>
+        
+        <p class="project-desc">
+          A secure, high-performance finance program built using core C++. It implements sequential file stream structures to read, write, update, and persist active customer ledger records continuously into local storage files.
+        </p>
+
+        <div class="terminal-container" style="background-color: #1c1c1c; border-radius: 6px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); overflow: hidden; margin-top: 15px; border: 1px solid #333;">
+          <div class="terminal-window-header" style="background-color: #2d2d2d; padding: 8px 12px; display: flex; align-items: center; border-bottom: 1px solid #3c3c3c;">
+            <span style="height: 10px; width: 10px; background-color: #ff5f56; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+            <span style="height: 10px; width: 10px; background-color: #ffbd2e; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+            <span style="height: 10px; width: 10px; background-color: #27c93f; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>
+            <span style="color: #aaa; margin-left: 10px; font-size: 13px; font-weight: bold;">bank_management.exe — File Streams</span>
+          </div>
+
+          <div class="terminal-window-body" style="padding: 0; height: 450px; background-color: #000; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+            <video width="100%" height="100%" autoplay loop muted playsinline webkit-playsinline style="width: 100%; height: 100%; object-fit: contain; background-color: #000; display: block;">
+              <source src="assets/images/video-2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="project-tags" style="margin-top: 15px; display: inline-block; width: 100%;">
+          <div style="float: left;">
+            <span class="tag">C++</span>
+            <span class="tag">File Handling</span>
+            <span class="tag">Data Streams</span>
+          </div>
+          <div style="float: right;">
+            <a href="https://github.com/bismaimran419/bank-management" target="_blank" class="tag" style="background: none; border: 1px solid #00aaff; color: #00aaff; text-decoration: none; font-weight: bold; padding: 5px 12px; border-radius: 4px;">
+              <i class="ph ph-github-logo" aria-hidden="true" style="vertical-align: middle;"></i> Source Code
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -354,7 +392,7 @@
             Download my resume to learn more.
           </p>
           <!-- Replace href with actual PDF file path when ready -->
-          <a href="resume.pdf" download class="btn btn-primary resume-btn">
+          <a href="assets/images/Bisma_Imran_Resume (1).docx" download class="btn btn-primary resume-btn">
             <i class="ph ph-download-simple" aria-hidden="true"></i>
             Download Resume
           </a>
