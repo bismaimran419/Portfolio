@@ -1185,3 +1185,100 @@ ul, ol { list-style: none; }
   object-fit: contain;
   border-radius: 6px;
 }
+
+
+/* ---- Animated Terminal ---- */
+.hero-terminal {
+  width: 520px;
+  background: rgba(15, 34, 64, 0.85);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  backdrop-filter: blur(8px);
+}
+
+.term-bar {
+  background: rgba(30,58,95,0.9);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.red    { background: #FF5F57; }
+.dot.yellow { background: #FFBD2E; }
+.dot.green  { background: #28C840; }
+
+.term-title-bar {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.05em;
+}
+
+.term-body {
+  padding: 18px 20px 22px;
+  min-height: 220px;
+  position: relative;
+}
+
+.code-line {
+  font-size: 12.5px;
+  line-height: 1.8;
+  white-space: pre;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.code-line.visible { opacity: 1; transform: translateY(0); }
+
+.c-keyword { color: #C792EA; }
+.c-fn      { color: #82AAFF; }
+.c-str     { color: #C3E88D; }
+.c-comment { color: #546E7A; font-style: italic; }
+.c-var     { color: #EEFFFF; }
+.c-punc    { color: rgba(255,255,255,0.45); }
+
+.cursor {
+  display: inline-block;
+  width: 7px; height: 13px;
+  background: #2F80ED;
+  vertical-align: middle;
+  border-radius: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.floating-tags { position: absolute; inset: 0; pointer-events: none; }
+
+.ftag {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: float-in 0.5s ease forwards, float-up 4s ease-in-out infinite;
+}
+
+.ftag.t1 { top:14px; right:12px; background:rgba(47,128,237,0.2); color:#2F80ED; border:1px solid rgba(47,128,237,0.3); animation-delay:2.5s,2.5s; }
+.ftag.t2 { bottom:48px; left:10px; background:rgba(199,121,234,0.2); color:#C779EA; border:1px solid rgba(199,121,234,0.3); animation-delay:3.2s,3.2s; }
+.ftag.t3 { bottom:18px; right:16px; background:rgba(195,232,141,0.18); color:#8BBE56; border:1px solid rgba(195,232,141,0.25); animation-delay:4s,4s; }
+
+@keyframes float-in { to{opacity:1} }
+@keyframes float-up { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+/* Mobile: terminal size adjust */
+@media (max-width: 900px) {
+  .hero-terminal { width: 260px; }
+}
+
+@media (max-width: 560px) {
+  .hero-terminal { width: 220px; }
+  .code-line { font-size: 11px; }
+}

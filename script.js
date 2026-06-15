@@ -301,3 +301,67 @@ function showFormStatus(msg, type) {
     formStatus.className = 'form-status';
   }, 5000);
 }
+
+
+/* ----------------------------------------------------------------
+   HERO TERMINAL ANIMATION
+---------------------------------------------------------------- */
+const termBody = document.getElementById('term-body');
+
+if (termBody) {
+  const floatTags = termBody.querySelector('.floating-tags');
+  const codeLines = [
+    `<span class="c-comment">// bisma_portfolio.cpp</span>`,
+    `<span class="c-keyword">#include</span> <span class="c-str">&lt;iostream&gt;</span>`,
+    `<span class="c-keyword">#include</span> <span class="c-str">&lt;string&gt;</span>`,
+    ``,
+    `<span class="c-keyword">class</span> <span class="c-fn">Developer</span> <span class="c-punc">{</span>`,
+    `  <span class="c-keyword">public</span><span class="c-punc">:</span>`,
+    `    <span class="c-var">string</span> name <span class="c-punc">=</span> <span class="c-str">"Bisma Imran"</span><span class="c-punc">;</span>`,
+    `    <span class="c-var">string</span> degree <span class="c-punc">=</span> <span class="c-str">"BS CS"</span><span class="c-punc">;</span>`,
+    `    <span class="c-var">bool</span> passionate <span class="c-punc">=</span> <span class="c-keyword">true</span><span class="c-punc">;</span>`,
+    ``,
+    `    <span class="c-fn">void</span> <span class="c-fn">greet</span><span class="c-punc">() {</span>`,
+    `      cout <span class="c-punc">&lt;&lt;</span> <span class="c-str">"Hello, World!"</span><span class="c-punc">;</span>`,
+    `    <span class="c-punc">}</span>`,
+    `<span class="c-punc">};</span>`,
+  ];
+
+  let idx = 0;
+
+  function showLine() {
+    if (idx >= codeLines.length) {
+      setTimeout(() => {
+        termBody.querySelectorAll('.code-line').forEach(l => {
+          l.style.opacity = '0';
+          l.style.transform = 'translateY(4px)';
+        });
+        setTimeout(() => {
+          termBody.querySelectorAll('.code-line').forEach(l => l.remove());
+          idx = 0;
+          setTimeout(showLine, 400);
+        }, 700);
+      }, 3500);
+      return;
+    }
+
+    const prev = termBody.querySelector('.cursor');
+    if (prev) prev.remove();
+
+    const div = document.createElement('div');
+    div.className = 'code-line';
+    div.innerHTML = codeLines[idx] === '' ? '&nbsp;' : codeLines[idx];
+
+    const cur = document.createElement('span');
+    cur.className = 'cursor';
+    div.appendChild(cur);
+
+    termBody.insertBefore(div, floatTags);
+    requestAnimationFrame(() => requestAnimationFrame(() => div.classList.add('visible')));
+
+    idx++;
+    setTimeout(showLine, codeLines[idx - 1] === '' ? 120 : 180 + Math.random() * 120);
+  }
+
+  setTimeout(showLine, 600);
+}
